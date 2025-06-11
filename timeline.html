@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Heloisa Bolognesi</title>
+    <meta name="description" content="Timeline de projetos e evolução de Heloisa Bolognesi em desenvolvimento.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="certificaçãoes.css">
+    <link rel="stylesheet" href="time.line.css">
+    
+    <style>
+        /* Ajustes específicos para timeline */
+        body { 
+            padding-top: 0 !important; 
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+        
+        /* Partículas de fundo */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: var(--bg-primary);
+        }
+        
+        /* Hero section adjustments */
+        .hero {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero .hero-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+        }
+        
+        .hero .hero-visual {
+            display: none !important;
+        }
+        
+        /* Timeline stats */
+        .timeline-stats-simple {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-stats-simple .stat-item {
+            background: var(--bg-tertiary);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            min-width: 150px;
+        }
+        
+        .timeline-stats-simple .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-primary);
+        }
+        
+        .timeline-stats-simple .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-stats-simple .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Timeline container */
+        .timeline-container {
+            padding-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Carrossel fixes */
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 16px 0;
+        }
+        
+        .timeline-card {
+            flex: 0 0 auto;
+            width: 380px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline-stats-simple .stat-item {
+                min-width: 120px;
+                padding: 1rem;
+            }
+            
+            .timeline-stats-simple .stat-number {
+                font-size: 2rem;
+            }
+            
+            .timeline-stats-simple .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .timeline-card {
+                width: 300px;
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .timeline-card {
+                width: 280px;
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Partículas de fundo -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text"> Heloisa Bolognesi</span>
+                <span class="logo-symbol">&lt;/&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-text="Home">Home</a></li>
+                <li><a href="index.html#about" data-text="About">Sobre Mim</a></li>
+                <li><a href="index.html#skills" data-text="Skills">Habilidades</a></li>
+                <li><a href="index.html#projects" data-text="Projects">Projetos</a></li>
+                <li><a href="certificações.html" data-text="Certifications">Certificações</a></li>
+                <li><a href="index.html#contact" data-text="Contact">Contato</a></li>
+                <li><a href="#timeline" data-text="Timeline">Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="typing-container">
+                    <span class="typing-text">console.log("Minha Timeline!");</span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="Timeline">Timeline</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="code-bracket">&lt;</span>
+                    <span class="role-text">Jornada de Evolução</span>
+                    <span class="code-bracket">/&gt;</span>
+                </div>
+                <p class="hero-description">
+                    Uma jornada através dos meus projetos e conquistas ao longo do tempo, documentando cada passo da minha evolução em desenvolvimento.
+                </p>
+                <div class="timeline-stats-simple">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Meses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Tecnologias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Timeline Navigation -->
+    <div class="timeline-container">
+        <div class="timeline-nav">
+            <button class="nav-btn active" data-month="janeiro">Janeiro/Fevereiro</button>
+            <button class="nav-btn" data-month="marco">Março</button>
+            <button class="nav-btn" data-month="abril">Abril</button>
+            <button class="nav-btn" data-month="maio">Maio</button>
+            <button class="nav-btn" data-month="junho">Junho</button>
+        </div>
+
+        <!-- Timeline Carousels -->
+        <div class="timeline-content">
+            <!-- Janeiro Carousel -->
+            <div class="month-carousel active" id="janeiro">
+                <div class="carousel-header">
+                    <h2>Jan/Fev 2025</h2>
+                    <p>Início do Curso</p>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="janeiro-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="janeiro-track">
+                            <div class="timeline-card">
+                                <div class="card-date">29 Jan</div>
+                                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="card-content">
+                                    <h3>Início do Curso SENAI</h3>
+                                    <p>Comecei o curso de Desenvolvimento de Sistemas no SENAI Morvan Figueiredo, e criei meu Linkedin</p>
+                                    <a href="https://www.linkedin.com/in/heloisa-sabino-bolognesi-b5279434a" target="_blank" class="card-link">
+                                        Acessar Linkedin
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">07 Fev</div>
+                                <div class="card-icon"><i class="fas fa-code"></i></div>
+                                <div class="card-content">
+                                    <h3>Monte o Seu Computador</h3>
+                                    <p>Realizei a montagem de três computadores, escolhendo peças como processador, placa-mãe, memória RAM e fonte. Aprendi sobre compatibilidade de hardware e montagem física de PCs.</p>
+                                    <a href="https://drive.google.com/file/d/1YZ7hF-oicZAfVGZMbDCANSvLCGL-ClzZ/view?usp=drive_link" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">28 Fev</div>
+                                <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="card-content">
+                                    <h3>Arquétipos e Tipografia</h3>
+                                    <p>Estudei como arquétipos influenciam a construção de marcas e escolhi fontes que transmitissem diferentes personalidades visuais. Aprendi a usar tipografia como ferramenta de comunicação.</p>
+                                    <a href="https://drive.google.com/file/d/1eP-6ZouaUWuYm0QHJmg4ns4p35NKHVev/view?usp=drive_link" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="janeiro-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Março Carousel -->
+            <div class="month-carousel" id="marco">
+                <div class="carousel-header">
+                    <h2>Março 2025</h2>
+                    <p>Descobrindo o Design</p>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="marco-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="marco-track">
+                            <div class="timeline-card">
+                                <div class="card-date">05 Mar</div>
+                                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                                <div class="card-content">
+                                    <h3>Cores e Gestalt</h3>
+                                    <p>Aprendi a aplicar os princípios da Gestalt no design e explorei como as cores influenciam a percepção visual. Criei composições que comunicam de forma clara e harmônica.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Design</span>
+                                        <span class="tag">Gestalt</span>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1pE4_RO0Jk1ffr3hsKSvZxL9gHtR5rqvk/view?usp=drive_link" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">12 Mar</div>
+                                <div class="card-icon"><i class="fab fa-figma"></i></div>
+                                <div class="card-content">
+                                    <h3>Figma</h3>
+                                    <p>Aprendi a usar o Figma para criar interfaces e protótipos. Explorei ferramentas básicas de design e desenvolvi minhas primeiras composições digitais.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Figma</span>
+                                        <span class="tag">UI/UX</span>
+                                    </div>
+                                    <a href="https://www.figma.com/design/ppZZmP65XcvnwsAyXD7VPL/trabalhos-iniciais?node-id=0-1&m=dev&t=v2IZlsxUlvjbqcza-1" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">28 Mar</div>
+                                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                                <div class="card-content">
+                                    <h3>Atividade Final – Figma</h3>
+                                    <p>Desenvolvi um projeto completo no Figma, aplicando princípios de design, tipografia, cores e usabilidade. Aprimorei minha organização visual e apresentação de interfaces.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Figma</span>
+                                        <span class="tag">Projeto Final</span>
+                                    </div>
+                                    <a href="https://www.figma.com/proto/iPCdlogfOMgu3GPVmPwDwi/Figma--Projeto-final?t=v2IZlsxUlvjbqcza-1" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <button class="carousel-btn next" id="marco-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <!-- Abril Carousel -->
+            <div class="month-carousel" id="abril">
+                <div class="carousel-header">
+                    <h2>Abril 2025</h2>
+                    <p>Primeiros Projetos Web</p>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="abril-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="abril-track">
+                            <div class="timeline-card">
+                                <div class="card-date">10 Abr</div>
+                                <div class="card-icon"><i class="fab fa-html5"></i></div>
+                                <div class="card-content">
+                                    <h3>Primeiro projeto HTML</h3>
+                                    <p>Meu primeiro projeto em HTML foi uma página simples, feita com estrutura básica e sem responsividade. Apesar das limitações, ele marcou o início do meu aprendizado em desenvolvimento web e me motivou a continuar evoluindo</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML</span>
+                                        <span class="tag">Primeiro Projeto</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/Viagens/" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">20 Abr</div>
+                                <div class="card-icon"><i class="fas fa-castle"></i></div>
+                                <div class="card-content">
+                                    <h3>Mundo Disney</h3>
+                                    <p>Mundo Disney é um site dedicado a celebrar a magia do universo Disney. Nele, você encontra informações sobre personagens, histórias encantadoras, filmes, curiosidades e muito mais!</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/Mundo-Disney/" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">25 Abr</div>
+                                <div class="card-icon"><i class="fas fa-shopping-bag"></i></div>
+                                <div class="card-content">
+                                    <h3>Hang</h3>
+                                    <p>Desenvolvi uma loja virtual com HTML e CSS, com foco no uso de diferentes tamanhos de imagem. O objetivo foi explorar proporções e ajustes visuais para destacar produtos de forma dinâmica.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">E-commerce</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/HANG/" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="abril-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Maio Carousel -->
+            <div class="month-carousel" id="maio">
+                <div class="carousel-header">
+                    <h2>Maio 2025</h2>
+                    <p>Projetos Práticos</p>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="maio-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="maio-track">
+                            <div class="timeline-card">
+                                <div class="card-date">08 Mai</div>
+                                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="card-content">
+                                    <h3>Sabores da Terra</h3>
+                                    <p>Site criado para apresentar o restaurante Sabores da Terra, destacando seu cardápio típico da culinária italiana, ambiente acolhedor e serviço de reservas online.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">Restaurante</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/Sabores-da-Terra/" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">22 Mai</div>
+                                <div class="card-icon"><i class="fas fa-globe"></i></div>
+                                <div class="card-content">
+                                    <h3>Sistema Solar</h3>
+                                    <p>Desenvolvi um site educativo sobre o sistema solar, utilizando HTML, CSS e JavaScript. O foco foi na criação de um infográfico responsivo com diagramas dos planetas.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">JavaScript</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/Sistema-solar/" target="_blank" class="card-link">
+                                        Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="maio-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Junho Carousel -->
+            <div class="month-carousel" id="junho">
+                <div class="carousel-header">
+                    <h2>Junho 2025</h2>
+                    <p>Consolidando Conhecimentos</p>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="junho-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="junho-track">
+                            <div class="timeline-card">
+                                <div class="card-date">02 Jun</div>
+                                <div class="card-icon"><i class="fas fa-shapes"></i></div>
+                                <div class="card-content">
+                                    <h3>Key Frames</h3>
+                                    <p>Criei um site para praticar a construção de formas geométricas usando apenas HTML e CSS. Explorei propriedades como width, height, border-radius, transform e position.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">Animações</span>
+                                    </div>
+                                    <a href="https://heloisabolognesi.github.io/Formas-/" target="_blank" class="card-link">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-date">11 Jun</div>
+                                <div class="card-icon"><i class="fab fa-git-alt"></i></div>
+                                <div class="card-content">
+                                    <h3>Projeto Final</h3>
+                                    <p>Desenvolvi um portfólio online reunindo todos os projetos realizados ao longo do semestre. Organizei os conteúdos com HTML e CSS, aplicando conhecimentos de layout, tipografia, cores, links e estrutura de navegação. O site reflete minha evolução como desenvolvedora front-end.</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Git</span>
+                                        <span class="tag">GitHub</span>
+                                        <span class="tag">Versionamento</span>
+                                    </div>
+                                    <a href="https://github.com/heloisabolognesi" target="_blank" class="card-link">Ver Perfil GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="junho-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Próximos Projetos Section -->
+        <section class="next-projects-section">
+            <h2>Próximos Projetos</h2>
+            <p>Estou sempre trabalhando em novos projetos e explorando tecnologias emergentes. Fique atento para as próximas atualizações!</p>
+            <div class="next-projects-buttons">
+                <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Voltar ao Início</a>
+                <a href="index.html#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Entre em Contato</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="
+        position: relative;
+        z-index: 9999;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        background-color: #000000;
+        color: white;">
+        
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-content" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="footer-text" style="margin-bottom: 10px;">
+                    <p style="margin: 0;">&copy; 2025 Heloisa Bolognesi. Desenvolvido com ❤️ e muito ☕</p>
+                </div>
+                <div class="footer-social" style="margin-top: 10px;">
+                    <a href="https://github.com/heloisabolognesi" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/heloisa-sabino-bolognesi-b5279434a" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/bolognesii_" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Configuração das partículas - IGUAL ÀS CERTIFICAÇÕES
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar partículas
+            if (typeof particlesJS !== "undefined") {
+                particlesJS("particles-js", {
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800,
+                            },
+                        },
+                        color: {
+                            value: "#6366f1",
+                        },
+                        shape: {
+                            type: "circle",
+                            stroke: {
+                                width: 0,
+                                color: "#000000",
+                            },
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: false,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false,
+                            },
+                        },
+                        size: {
+                            value: 3,
+                            random: true,
+                            anim: {
+                                enable: false,
+                                speed: 40,
+                                size_min: 0.1,
+                                sync: false,
+                            },
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#6366f1",
+                            opacity: 0.4,
+                            width: 1,
+                        },
+                        move: {
+                            enable: true,
+                            speed: 6,
+                            direction: "none",
+                            random: false,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200,
+                            },
+                        },
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "repulse",
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: "push",
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            grab: {
+                                distance: 400,
+                                line_linked: {
+                                    opacity: 1,
+                                },
+                            },
+                            bubble: {
+                                distance: 400,
+                                size: 40,
+                                duration: 2,
+                                opacity: 8,
+                                speed: 3,
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                            push: {
+                                particles_nb: 4,
+                            },
+                            remove: {
+                                particles_nb: 2,
+                            },
+                        },
+                    },
+                    retina_detect: true,
+                });
+            }
+
+            // Cursor personalizado
+            const cursor = document.querySelector(".cursor");
+            const cursorFollower = document.querySelector(".cursor-follower");
+
+            if (cursor && cursorFollower) {
+                let mouseX = 0;
+                let mouseY = 0;
+
+                document.addEventListener("mousemove", (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+                    cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+                });
+
+                document.querySelectorAll("a, button").forEach((el) => {
+                    el.addEventListener("mouseenter", () => {
+                        cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.5)`;
+                        cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.5)`;
+                    });
+
+                    el.addEventListener("mouseleave", () => {
+                        cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1)`;
+                        cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1)`;
+                    });
+                });
+            }
+
+            // Animação de digitação
+            function typeWriter(element, text, speed = 100) {
+                let i = 0;
+                element.innerHTML = "";
+
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+            }
+
+            // Inicializar animação de digitação
+            const typingElement = document.querySelector(".typing-text");
+            if (typingElement) {
+                typeWriter(typingElement, 'console.log("Minha Timeline!");', 150);
+            }
+
+            // SISTEMA DE CARROSSEL CORRIGIDO
+            const carouselStates = {
+                janeiro: { currentIndex: 0 },
+                marco: { currentIndex: 0 },
+                abril: { currentIndex: 0 },
+                maio: { currentIndex: 0 },
+                junho: { currentIndex: 0 }
+            };
+
+            // Inicializar navegação dos meses
+            document.querySelectorAll(".timeline-nav .nav-btn").forEach(btn => {
+                btn.addEventListener("click", function() {
+                    const month = this.dataset.month;
+                    if (!month) return;
+
+                    // Atualizar estado do botão ativo
+                    document.querySelectorAll(".timeline-nav .nav-btn").forEach(b => b.classList.remove("active"));
+                    this.classList.add("active");
+
+                    // Mostrar o carrossel do mês selecionado e esconder os outros
+                    document.querySelectorAll(".month-carousel").forEach(c => c.classList.remove("active"));
+                    const targetCarousel = document.getElementById(month);
+                    if (targetCarousel) {
+                        targetCarousel.classList.add("active");
+                        updateCarouselView(month);
+                    }
+                });
+            });
+
+            // Configurar botões dos carrosséis
+            function setupCarouselButtons() {
+                Object.keys(carouselStates).forEach(monthId => {
+                    const prevBtn = document.getElementById(`${monthId}-prev`);
+                    const nextBtn = document.getElementById(`${monthId}-next`);
+                    
+                    if (prevBtn) {
+                        prevBtn.addEventListener('click', () => {
+                            if (carouselStates[monthId].currentIndex > 0) {
+                                carouselStates[monthId].currentIndex--;
+                                updateCarouselView(monthId);
+                            }
+                        });
+                    }
+                    
+                    if (nextBtn) {
+                        nextBtn.addEventListener('click', () => {
+                            const track = document.getElementById(`${monthId}-track`);
+                            const cards = track?.querySelectorAll(".timeline-card");
+                            const wrapper = track?.parentElement;
+                            
+                            if (track && cards && wrapper) {
+                                const cardWidth = cards[0].offsetWidth;
+                                const gap = 24;
+                                const totalWidth = cards.length * (cardWidth + gap) - gap;
+                                const wrapperWidth = wrapper.offsetWidth;
+                                const maxIndex = Math.max(0, Math.ceil((totalWidth - wrapperWidth) / (cardWidth + gap)));
+                                
+                                if (carouselStates[monthId].currentIndex < maxIndex) {
+                                    carouselStates[monthId].currentIndex++;
+                                    updateCarouselView(monthId);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+
+            function updateCarouselView(monthId) {
+                const track = document.getElementById(`${monthId}-track`);
+                const cards = track?.querySelectorAll(".timeline-card");
+                const wrapper = track?.parentElement;
+                const prevBtn = document.getElementById(`${monthId}-prev`);
+                const nextBtn = document.getElementById(`${monthId}-next`);
+
+                if (!track || !cards || !wrapper) return;
+
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 24;
+                const currentIndex = carouselStates[monthId].currentIndex;
+                const totalWidth = cards.length * (cardWidth + gap) - gap;
+                const wrapperWidth = wrapper.offsetWidth;
+                const maxIndex = Math.max(0, Math.ceil((totalWidth - wrapperWidth) / (cardWidth + gap)));
+
+                // Aplicar transformação
+                const offset = -currentIndex * (cardWidth + gap);
+                track.style.transform = `translateX(${offset}px)`;
+
+                // Atualizar estado dos botões
+                if (prevBtn) prevBtn.disabled = currentIndex <= 0;
+                if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex || totalWidth <= wrapperWidth;
+            }
+
+            // Inicializar carrosséis
+            setupCarouselButtons();
+            updateCarouselView('janeiro'); // Carrossel inicial
+
+            // Navbar scroll effect
+            const navbar = document.querySelector(".navbar");
+            if (navbar) {
+                window.addEventListener("scroll", () => {
+                    navbar.style.background = window.scrollY > 100 
+                        ? "rgba(10, 10, 10, 0.95)" 
+                        : "rgba(10, 10, 10, 0.9)";
+                    navbar.style.backdropFilter = "blur(20px)";
+                });
+            }
+
+            // Menu mobile
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active");
+                    navLinks.classList.toggle("active");
+                });
+
+                document.querySelectorAll(".nav-links a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        hamburger.classList.remove("active");
+                        navLinks.classList.remove("active");
+                    });
+                });
+            }
+
+            // Navegação suave
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
+            });
+
+            // Navegação por teclado
+            document.addEventListener('keydown', (e) => {
+                const activeCarousel = document.querySelector(".month-carousel.active");
+                if (!activeCarousel) return;
+                
+                const monthId = activeCarousel.id;
+                if (e.key === 'ArrowLeft' && carouselStates[monthId].currentIndex > 0) {
+                    carouselStates[monthId].currentIndex--;
+                    updateCarouselView(monthId);
+                }
+                if (e.key === 'ArrowRight') {
+                    const track = document.getElementById(`${monthId}-track`);
+                    const cards = track?.querySelectorAll(".timeline-card");
+                    const wrapper = track?.parentElement;
+                    
+                    if (track && cards && wrapper) {
+                        const cardWidth = cards[0].offsetWidth;
+                        const gap = 24;
+                        const totalWidth = cards.length * (cardWidth + gap) - gap;
+                        const wrapperWidth = wrapper.offsetWidth;
+                        const maxIndex = Math.max(0, Math.ceil((totalWidth - wrapperWidth) / (cardWidth + gap)));
+                        
+                        if (carouselStates[monthId].currentIndex < maxIndex) {
+                            carouselStates[monthId].currentIndex++;
+                            updateCarouselView(monthId);
+                        }
+                    }
+                }
+            });
+
+            // Suporte a Touch/Swipe
+            let startX = 0;
+            let endX = 0;
+
+            document.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+
+            document.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const difference = startX - endX;
+                
+                if (Math.abs(difference) > 50) {
+                    const activeCarousel = document.querySelector(".month-carousel.active");
+                    if (activeCarousel) {
+                        const monthId = activeCarousel.id;
+                        if (difference > 0) { // Swipe left - next
+                            const track = document.getElementById(`${monthId}-track`);
+                            const cards = track?.querySelectorAll(".timeline-card");
+                            const wrapper = track?.parentElement;
+                            
+                            if (track && cards && wrapper) {
+                                const cardWidth = cards[0].offsetWidth;
+                                const gap = 24;
+                                const totalWidth = cards.length * (cardWidth + gap) - gap;
+                                const wrapperWidth = wrapper.offsetWidth;
+                                const maxIndex = Math.max(0, Math.ceil((totalWidth - wrapperWidth) / (cardWidth + gap)));
+                                
+                                if (carouselStates[monthId].currentIndex < maxIndex) {
+                                    carouselStates[monthId].currentIndex++;
+                                    updateCarouselView(monthId);
+                                }
+                            }
+                        } else { // Swipe right - prev
+                            if (carouselStates[monthId].currentIndex > 0) {
+                                carouselStates[monthId].currentIndex--;
+                                updateCarouselView(monthId);
+                            }
+                        }
+                    }
+                }
+            });
+
+            console.log("🚀 Timeline carregada com sucesso!");
+        });
+    </script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- No body -->
+<div id="particles-js"></div>
+
+<!-- CSS necessário -->
+<style>
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+</style>

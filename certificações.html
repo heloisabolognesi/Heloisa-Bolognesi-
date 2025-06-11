@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heloisa Bolognesi - Certificações</title>
+    <meta name="description" content="Certificações de Heloisa Bolognesi em desenvolvimento frontend.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="certificaçãoes.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Partículas de fundo -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text"> Heloisa Bolognesi</span>
+                <span class="logo-symbol">&lt;/&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-text="Home">Home</a></li>
+                <li><a href="index.html#about" data-text="About">Sobre Mim</a></li>
+                <li><a href="index.html#skills" data-text="Skills">Habilidades</a></li>
+                <li><a href="index.html#projects" data-text="Projects">Projetos</a></li>
+                <li><a href="#certifications" data-text="Certifications">Certificações</a></li>
+                <li><a href="index.html#contact" data-text="Contact">Contato</a></li>
+                <li><a href="timeline.html" data-text="Timeline">Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="typing-container">
+                    <span class="typing-text">console.log("Meus Certificados!");</span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="Certificações">Certificações</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="code-bracket">&lt;</span>
+                    <span class="role-text">Em Constante Evolução</span>
+                    <span class="code-bracket">/&gt;</span>
+                </div>
+                <p class="hero-description">
+                    Uma jornada de aprendizado contínuo e conquistas em diversas áreas da tecnologia e desenvolvimento profissional.
+                </p>
+                <div class="timeline-stats-simple">
+                    <div class="stat-item">
+                        <span class="stat-number">14+</span>
+                        <span class="stat-label">Certificados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Horas de Estudo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Áreas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+   
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"> < Meus Certificados /> </h2>
+            </div>
+         <!-- HTML do botão -->
+<button onclick="window.open('https://drive.google.com/drive/folders/1SSW1t53Bhz9ABZIY3NZUqrHuiHFm1Pmw')" 
+        class="btn-ver-todos">
+    📁 Ver Todos os Certificados
+</button>
+
+<!-- CSS do botão -->
+<style>
+.btn-ver-todos {
+    display: block;
+    margin: 0 auto 3rem auto;
+    background: linear-gradient(45deg, #00d4ff, #7b2cbf);
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 35px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    text-align: center;
+    font-family: inherit;
+}
+
+.btn-ver-todos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn-ver-todos:active {
+    transform: translateY(-1px);
+}
+</style>
+
+<!-- JavaScript do botão (opcional) -->
+<script>
+document.querySelector('.btn-ver-todos').addEventListener('click', function(e) {
+    this.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        this.style.transform = 'scale(1)';
+    }, 150);
+});
+</script>
+            <div class="certifications-grid">
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-shield-alt certification-icon-small"></i>
+                        <h3>Competência Transversal - Segurança no Trabalho</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Competência Transversal em Segurança no Trabalho, abordando normas de segurança e prevenção de acidentes.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                     
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-leaf certification-icon-small"></i>
+                        <h3>Desvendando a Descarbonização</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso Desvendando a Descarbonização, focando em sustentabilidade e práticas ambientais responsáveis.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                      
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-brain certification-icon-small"></i>
+                        <h3>Ética na Inteligência Artificial</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Ética na Inteligência Artificial, explorando aspectos éticos e responsáveis do uso de IA.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                     
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-table certification-icon-small"></i>
+                        <h3>Excel Básico</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Excel Básico, cobrindo fundamentos de planilhas eletrônicas e análise de dados.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                       
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-robot certification-icon-small"></i>
+                        <h3>FLUÊNCIA - FUNDAMENTOS DA INTELIGÊNCIA ARTIFICIAL</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso FLUÊNCIA - FUNDAMENTOS DA INTELIGÊNCIA ARTIFICIAL, abordando conceitos fundamentais de IA.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-lock certification-icon-small"></i>
+                        <h3>Por dentro da Segurança Cibernética</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso Por dentro da Segurança Cibernética, explorando conceitos de proteção digital e cibersegurança.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">SENAI</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                     
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-chart-line certification-icon-small"></i>
+                        <h3>Gestão Empresarial</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Gestão Empresarial, cobrindo fundamentos de administração e liderança organizacional.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">Cetef Cursos</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                  
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-desktop certification-icon-small"></i>
+                        <h3>Informática</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Informática, abordando fundamentos de computação e tecnologia da informação.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">Cetef Cursos</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                       
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-microchip certification-icon-small"></i>
+                        <h3>Hardware</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Hardware, cobrindo componentes físicos de computadores e manutenção de equipamentos.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">Cisco</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                       
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fas fa-code certification-icon-small"></i>
+                        <h3>Software</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Software, explorando desenvolvimento de aplicações e programação de sistemas.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">Ciscoo</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                   
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <i class="fab fa-linux certification-icon-small"></i>
+                        <h3>Linux</h3>
+                    </div>
+                    <p>Certificado de conclusão do curso de Linux, abordando administração de sistemas e linha de comando em ambientes Unix/Linux.</p>
+                    <div class="certification-meta">
+                        <span class="certification-institution">Cisco</span>
+                        <span class="certification-date">2025</span>
+                    </div>
+                    <a href="#" target="_blank" class="certification-link">
+                        <i class="fas fa-external-link-alt"></i>
+                      
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Cursos - Heloisa Bolognesi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #00d4ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #00d4ff;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #a855f7, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #999;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #a855f7, #7c3aed);
+            color: white;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+
+        .btn-secondary:hover {
+            background: #00d4ff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-text {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #666;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00d4ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-container">
+            <h1>Próximos Cursos</h1>
+            <p class="subtitle">
+                Estou sempre em busca de novos conhecimentos e tecnologias emergentes. Para a próxima etapa da minha jornada de aprendizado contínuo, planejo focar em cursos de JavaScript, Python e Banco de Dados. Acompanhe essa evolução!
+            </p>
+            
+          
+                
+                <button onclick="window.location.href='index.html'" 
+                        class="btn btn-secondary">
+                    🏠 Voltar ao Início
+                </button>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script>
+        // Animação dos botões
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Animação de entrada
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('h1, .subtitle, .btn');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
+
+    <footer class="footer" style="
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000000;
+    color: white;">
+    
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="footer-content" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="footer-text" style="margin-bottom: 10px;">
+                <p style="margin: 0;">&copy; 2025 Heloisa Bolognesi. Desenvolvido com ❤️ e muito ☕</p>
+            </div>
+            <div class="footer-social" style="margin-top: 10px;">
+                <a href="https://github.com/heloisabolognesi" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="www.linkedin.com/in/heloisa-sabino-bolognesi-b5279434a" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                
+                <a href="https://instagram.com/bolognesii_" target="_blank" class="social-link" style="margin: 0 10px; text-decoration: none; color: white; font-size: 1.5em;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="certificações.js"></script>
+</body>
+</html>
+

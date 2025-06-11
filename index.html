@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heloisa Bolognesi - Desenvolvedora Frontend</title>
+    <meta name="description" content="Portfolio de Heloisa Bolognesi, desenvolvedora frontend especializada em React, Vue.js e tecnologias modernas.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Partículas de fundo -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Heloisa                         Bolognesi</span>
+                <span class="logo-symbol">&lt;/&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-text="Home">Home</a></li>
+                <li><a href="#about" data-text="About">Sobre Mim</a></li>
+                <li><a href="#skills" data-text="Skills">Habilidades</a></li>
+                <li><a href="#projects" data-text="Projects">Projetos</a></li>
+                <li><a href="#certifications" data-text="Certifications">Certificações</a></li>
+                <li><a href="#contact" data-text="Contact">Contato</a></li>
+                <li><a href="timeline.html" data-text="Timeline">Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="typing-container">
+                    <span class="typing-text">console.log("Hello World!");</span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="Heloisa Bolognesi">Heloisa Bolognesi</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="code-bracket">&lt;</span>
+                    <span class="role-text">Frontend Developer</span>
+                    <span class="code-bracket">/&gt;</span>
+                </div>
+                <p class="hero-description">
+                    Transformo código em soluções e desafios em oportunidades, com propósito, paixão e presença feminina na tecnologia.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Ver Projetos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contato</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="deconstructed-photo">
+                    <div class="photo-container">
+                        <div class="photo-main">
+                            <img src="./img/eu3.png" alt="Heloisa Bolognesi">
+                        </div>
+                        <div class="photo-fragments">
+                            <div class="fragment fragment-1"></div>
+                            <div class="fragment fragment-2"></div>
+                            <div class="fragment fragment-3"></div>
+                            <div class="fragment fragment-4"></div>
+                        </div>
+                        <div class="geometric-shapes">
+                            <div class="shape shape-triangle"></div>
+                            <div class="shape shape-circle"></div>
+                            <div class="shape shape-square"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-comment">&lt;/&gt; Sobre mim</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">heloisa@developer:~$</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> whoami
+                            </div>
+                            <div class="terminal-output">
+                                <p>Prazer, Heloisa Bolognesi! Uma desenvolvedora apaixonada por criar experiências digitais que conectam tecnologia e criatividade. Minha jornada no mundo da programação começou com curiosidade e se transformou em uma verdadeira paixão.</p>
+                                <p>Atualmente, estudo Desenvolvimento de Sistemas no SENAI Morvan Figueiredo, onde venho aprimorando minhas habilidades em front-end e design UI/UX.</p>
+                                <p>Busco sempre equilibrar funcionalidade, estética e usabilidade em cada projeto. Acredito que a tecnologia deve ser acessível e intuitiva.</p>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cat skills.json
+                            </div>
+                            <div class="terminal-output">
+                                {<br>
+                                &nbsp;&nbsp;"frontend": ["React", "Vue.js", "JavaScript", "TypeScript"],<br>
+                                &nbsp;&nbsp;"styling": ["CSS3", "SASS", "Tailwind", "Styled Components"],<br>
+                                &nbsp;&nbsp;"tools": ["Git", "Webpack", "Vite", "Figma"],<br>
+                                &nbsp;&nbsp;"backend": ["Node.js", "Express", "MongoDB"]<br>
+                                }
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> <span class="cursor-blink">|</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projetos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Cafés</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Certificações</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-number" data-target="200">0</div>
+                        <div class="stat-label">Horas de Código</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    <section class="habilidades-section">
+        <!-- Background Pattern igual ao início do site -->
+        <div class="background-pattern">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+            <div class="dot dot-4"></div>
+            <div class="dot dot-5"></div>
+            <div class="dot dot-6"></div>
+            <div class="dot dot-7"></div>
+            <div class="dot dot-8"></div>
+
+            <svg class="network-lines" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
+                    </linearGradient>
+                </defs>
+                <line x1="10%" y1="20%" x2="30%" y2="40%" stroke="url(#line-gradient)" stroke-width="1" />
+                <line x1="70%" y1="15%" x2="85%" y2="35%" stroke="url(#line-gradient)" stroke-width="1" />
+                <line x1="20%" y1="70%" x2="45%" y2="85%" stroke="url(#line-gradient)" stroke-width="1" />
+                <line x1="60%" y1="60%" x2="80%" y2="80%" stroke="url(#line-gradient)" stroke-width="1" />
+                <line x1="15%" y1="50%" x2="35%" y2="65%" stroke="url(#line-gradient)" stroke-width="1" />
+                <line x1="75%" y1="45%" x2="90%" y2="60%" stroke="url(#line-gradient)" stroke-width="1" />
+            </svg>
+
+            <!-- Formas geométricas passando atrás igual ao início -->
+            <div class="geometric-shapes">
+                <div class="shape hexagon hexagon-1"></div>
+                <div class="shape hexagon hexagon-2"></div>
+                <div class="shape hexagon hexagon-3"></div>
+                <div class="shape triangle triangle-1"></div>
+                <div class="shape triangle triangle-2"></div>
+                <div class="shape triangle triangle-3"></div>
+                <div class="shape circle circle-1"></div>
+                <div class="shape circle circle-2"></div>
+                <div class="shape circle circle-3"></div>
+                <div class="shape square square-1"></div>
+                <div class="shape square square-2"></div>
+                <div class="shape diamond diamond-1"></div>
+                <div class="shape diamond diamond-2"></div>
+            </div>
+        </div>
+
+        <div class="habilidades-title">
+            <h2>&lt; Minhas Habilidades /&gt;</h2>
+        </div>
+
+        <div class="habilidades-grid">
+            <!-- Frontend -->
+            <div class="habilidade-categoria frontend">
+                <h3 class="categoria-title">
+                    <i class="fas fa-code categoria-icon"></i>
+                    Frontend
+                </h3>
+                <ul class="habilidades-lista">
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <span class="habilidade-nome">CSS3</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <span class="habilidade-nome">HTML5</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <span class="habilidade-nome">Flexbox</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <span class="habilidade-nome">Propriedades de display</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <span class="habilidade-nome">Aplicação de classes e IDs</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <span class="habilidade-nome">Criação de menus com listas</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span class="habilidade-nome">Design Responsivo</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="habilidade-nome">KeyFrames</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="habilidade-nome">Lógica de programação</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="habilidade-categoria backend">
+                <h3 class="categoria-title">
+                    <i class="fas fa-server categoria-icon"></i>
+                    Backend
+                </h3>
+                <ul class="habilidades-lista">
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="habilidade-nome">Lógica de programação</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <span class="habilidade-nome">Express.js</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="habilidade-nome">MySQL</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="habilidade-nome">MongoDB</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <span class="habilidade-nome">REST APIs</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="habilidade-nome">JSON</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Design & UX -->
+            <div class="habilidade-categoria design">
+                <h3 class="categoria-title">
+                    <i class="fas fa-palette categoria-icon"></i>
+                    Design & UX
+                </h3>
+                <ul class="habilidades-lista">
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <span class="habilidade-nome">UI/UX Design</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <span class="habilidade-nome">Tipografia</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <span class="habilidade-nome">Prototipagem</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <span class="habilidade-nome">Paleta de cores</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <span class="habilidade-nome">Hierarquia visual</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <span class="habilidade-nome">Criação de wireframes</span>
+                    </li>
+                    <li class="habilidade-item">
+                        <div class="habilidade-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="habilidade-nome">Gestalt</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="ferramentas-section">
+            <div class="ferramentas-title">
+                <h3>
+                    <i class="fas fa-tools"></i>
+                    Ferramentas
+                </h3>
+            </div>
+            <div class="ferramentas-grid">
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon git-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="ferramenta-nome">Git & GitHub</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon vscode-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="ferramenta-nome">VS Code</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon figma-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <div class="ferramenta-nome">Figma</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon canva-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="ferramenta-nome">Canva</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon miro-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="ferramenta-nome">Miro</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="ferramenta-nome">LinkedIn</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon trello-icon">
+                        <i class="fab fa-trello"></i>
+                    </div>
+                    <div class="ferramenta-nome">Trello</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon notion-icon">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <div class="ferramenta-nome">Notion</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon slack-icon">
+                        <i class="fab fa-slack"></i>
+                    </div>
+                    <div class="ferramenta-nome">Slack</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon photoshop-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="ferramenta-nome">Photoshop</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon illustrator-icon">
+                        <i class="fas fa-vector-square"></i>
+                    </div>
+                    <div class="ferramenta-nome">Illustrator</div>
+                </div>
+                <div class="ferramenta-item">
+                    <div class="ferramenta-icon wordpress-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <div class="ferramenta-nome">WordPress</div>
+                </div>
+            </div>
+        </div>
+
+      
+</body>
+</html>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-comment">&lt;/&gt; Meus Projetos</span>
+                </h2>
+                <p class="section-subtitle">Alguns dos projetos que desenvolvi recentemente</p>
+            </div>
+
+            <div class="projects-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/disney1.jpg" alt="disney">
+                                    <div class="project-overlay">
+                                        <div class="project-links">
+                                            <a href="#" class="project-link">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://heloisabolognesi.github.io/Mundo-Disney/" target="_blank" class="btn-ver-todos">
+    Ver Detalhes
+</a>
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <h3>Mundo Disney </h3>
+                                        
+                                    </div>
+                                    <p> Mundo Disney é um site dedicado a celebrar a magia do universo Disney. Nele, você encontra informações sobre personagens, histórias encantadoras, filmes, curiosidades e muito mais! Um espaço criado para fãs de todas as idades reviverem memórias e explorarem a fantasia que só a Disney proporciona.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                       
+                                    </div>
+                                    <div class="project-date">Abril 2025</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/hang.png" alt="hang">
+                                    <div class="project-overlay">
+                                        <div class="project-links">
+                                            <a href="#" class="project-link">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://heloisabolognesi.github.io/HANG/" target="_blank" class="btn-ver-todos">
+    Ver Detalhes
+</a>
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <h3>Hang</h3>
+                                        
+                                    </div>
+                                    <p>Desenvolvi uma loja virtual com HTML e CSS, com foco no uso de diferentes tamanhos de imagem. O objetivo foi explorar proporções e ajustes visuais para destacar produtos de forma dinâmica.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        
+                                    </div>
+                                    <div class="project-date">Maio 2025</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="./img/restaurante.png" alt="sabores">
+                                    <div class="project-overlay">
+                                        <div class="project-links">
+                                            <a href="#" class="project-link">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                            <a href="https://heloisabolognesi.github.io/HANG/" target="_blank" class="btn-ver-todos">
+    Ver Detalhes
+</a>
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <h3>Sabores da Terra</h3>
+                                        
+                                    </div>
+                                    <p>Site criado para apresentar o restaurante Sabores da Terra, destacando seu cardápio típico da culinária italiana, ambiente acolhedor e serviço de reservas online. O design valoriza fotos dos pratos e facilita a navegação, oferecendo uma experiência intuitiva para o usuário.
+
+</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        <span class="tech-tag">JS</span>
+                                        
+                                    </div>
+                                    <div class="project-date">Abril 2025</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="./img/viagens.jpg" alt="Chat Application">
+                                    <div class="project-overlay">
+                                        <div class="project-links">
+                                            <a href="#" class="project-link">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                           <a href="https://heloisabolognesi.github.io/Viagens/" target="_blank" class="btn-ver-todos">
+    Ver Detalhes
+</a>
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <h3>Viagnes</h3>
+                                        
+                                    </div>
+                                    <p>Site pessoal que reúne relatos e fotos de diferentes destinos explorados, como Foz do Iguaçu e países vizinhos. Com uma estrutura simples e visual agradável, o site convida o visitante a conhecer e se inspirar nas experiências de viagem.
+
+</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        
+                                    </div>
+                                    <div class="project-date">Maio 2025</div>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
+            </div>
+
+            <div class="projects-footer">
+                <a href="timeline.html" class="btn btn-primary btn-more-projects">
+                    <span>Ver Timeline dos Projetos</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-comment">&lt;/&gt; Minhas Certificações</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon react-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">HTML Essentials</h3>
+                        <div class="cert-issuer">Cisco</div>
+                        <div class="cert-date">Data de Emissão: 05/2025</div>
+                        <p class="cert-description">
+                            Certificação avançada em desenvolvimento React, incluindo hooks, context API e performance optimization.
+                        </p>
+                        <a href="#" class="cert-button">
+                           
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="certification-card">
+                    <div class="cert-icon design-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">CSS Essentials</h3>
+                        <div class="cert-issuer">Cisco</div>
+                        <div class="cert-date">Data de Emissão: 05/2025</div>
+                        <p class="cert-description">
+                            Fundamentos de design de interface e experiência do usuário, prototipagem e design thinking.
+                        </p>
+                        <a href="#" class="cert-button">
+                            
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications-footer">
+                <p class="cert-footer-text">
+                    Sempre em busca de novos conhecimentos e certificações para me manter atualizada com as últimas tecnologias.
+                </p>
+                <div class="projects-footer">
+                <a href="certificações.html" class="btn btn-primary btn-more-projects">
+                    <span>Ver todas as certificações </span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ===== FOOTER PROFISSIONAL COMPLETO ===== -->
+<!-- ===== SEÇÃO DE CONTATOS ===== -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="code-comment">&lt;/&gt; Vamos nos conectar?</span>
+            </h2>
+            <p class="section-subtitle">Entre em contato comigo através das redes sociais e canais de comunicação</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Email -->
+            <a href="mailto:heloisa.bolognesi@aluno.senai.br" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p>heloisa.bolognesi@aluno.senai.br</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/heloisa-sabino-bolognesi-b5279434a" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>LinkedIn</h3>
+                    <p>Conecte-se comigo</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/heloisabolognesi" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>GitHub</h3>
+                    <p>Veja meus projetos</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/bolognesii_" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Instagram</h3>
+                    <p>@bolognesii_</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Telefone -->
+            <a href="tel:+5511947081512" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Telefone</h3>
+                    <p>+55 (11) 94708-1512</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5511947081512" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>WhatsApp</h3>
+                    <p>Conversar pelo WhatsApp</p>
+                </div>
+                <div class="contact-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER PROFISSIONAL COMPLETO ===== -->
+<footer class="footer">
+    <div class="container">
+        <!-- Grid Principal do Footer -->
+        <div class="footer-main">
+            
+            <!-- SEÇÃO 1: SOBRE -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-text">Heloisa Bolognesi</span>
+                    <span class="logo-symbol">&lt;/&gt;</span>
+                </div>
+                <p class="footer-description">
+                    Desenvolvedora Frontend apaixonada por criar experiências digitais incríveis. 
+                    Especializada em React, Vue.js e tecnologias modernas.
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/heloisabolognesi" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/heloisa-sabino-bolognesi-b5279434a" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/bolognesii_" target="_blank" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5511947081512" target="_blank" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 2: NAVEGAÇÃO -->
+            <div class="footer-section">
+                <h4 class="footer-title">Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#certifications">Certificações</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                </ul>
+            </div>
+
+            <!-- SEÇÃO 3: PROJETOS -->
+            <div class="footer-section">
+                <h4 class="footer-title">Projetos</h4>
+                <ul class="footer-links">
+                    <li><a href="https://heloisabolognesi.github.io/Mundo-Disney/" target="_blank">Mundo Disney</a></li>
+                    <li><a href="https://heloisabolognesi.github.io/HANG/" target="_blank">Hang Store</a></li>
+                    <li><a href="https://heloisabolognesi.github.io/Viagens/" target="_blank">Viagens</a></li>
+                    <li><a href="https://github.com/heloisabolognesi" target="_blank">Ver Todos no GitHub</a></li>
+                </ul>
+            </div>
+
+            <!-- SEÇÃO 4: RECURSOS -->
+            <div class="footer-section">
+                <h4 class="footer-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="certificações.html">Certificações</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    
+                    <li><a href="mailto:heloisa.bolognesi@aluno.senai.br">Enviar Email</a></li>
+                </ul>
+            </div>
+
+            <!-- SEÇÃO 5: CONTATO -->
+            <div class="footer-section">
+                <h4 class="footer-title">Contato</h4>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>heloisa.bolognesi@aluno.senai.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+55 (11) 94708-1512</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, SP - Brasil</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SENAI Morvan Figueiredo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha Divisória -->
+        <div class="footer-divider"></div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <!-- Copyright e Assinatura -->
+            <div class="footer-copyright">
+                <p>&copy; 2025 Heloisa Bolognesi. Todos os direitos reservados.</p>
+                <div class="footer-signature">
+                    <span class="code-bracket">&lt;</span>
+                    <span class="code-text">Desenvolvido com ❤️ e muito ☕ por Heloisa</span>
+                    <span class="code-bracket">/&gt;</span>
+                </div>
+            </div>
+            
+            <!-- Meta Informações -->
+            <div class="footer-meta">
+                <!-- Badges de Especialidades -->
+                <div class="footer-badges">
+                    <span class="badge">Frontend Developer</span>
+                    <span class="badge">UI/UX Designer</span>
+                    <span class="badge">React Specialist</span>
+                </div>
+                
+                <!-- Status de Disponibilidade -->
+                <div class="footer-status">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Disponível para projetos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
